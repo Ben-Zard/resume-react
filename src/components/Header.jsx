@@ -22,13 +22,13 @@ const Headermain = () => {
   const sideVariants = {
     closed: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 1.5,
         staggerDirection: -1,
       },
     },
     open: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 1.5,
         staggerDirection: 1,
       },
     },
@@ -44,6 +44,7 @@ const Headermain = () => {
         duration: 1,
         delay: 0.6,
       }}
+      variants={itemVariants}
       className="header"
     >
       <header className="site__header">
@@ -60,51 +61,54 @@ const Headermain = () => {
         </div>
 
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
-          <div className="bg__menu h-100">
+          <div className="bg__menu">
             <div className="menu__wrapper">
-              <div className="menu__container p-3">
-                <ul className="the_menu">
+              <div className="menu__container">
+                <motion.ul 
+                    variants={sideVariants}
+                    animate="open"
+                className="the_menu">
                   <motion.li
                     whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
+                    variants={sideVariants}
                     className="menu_item "
                   >
-                    <Link onClick={handleToggle} to="/" className="my-3">
+                    <Link onClick={handleToggle} to="/" className="">
                       Home
                     </Link>
                   </motion.li>
                   <motion.li
                     whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
+                    variants={sideVariants}
                     className="menu_item "
                   >
                     <Link
                       onClick={handleToggle}
                       to="/portfolio"
-                      className="my-3"
+                      className=""
                     >
                       Portfolio
                     </Link>
                   </motion.li>
                   <motion.li
                     whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
+                    variants={sideVariants}
                     className="menu_item"
                   >
-                    <Link onClick={handleToggle} to="/about" className="my-3">
+                    <Link onClick={handleToggle} to="/about" className="">
                       About
                     </Link>
                   </motion.li>
                   <motion.li
                     whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
+                    variants={sideVariants}
                     className="menu_item"
                   >
-                    <Link onClick={handleToggle} to="/contact" className="my-3">
+                    <Link onClick={handleToggle} to="/contact" className="">
                       Contact
                     </Link>
                   </motion.li>
-                </ul>
+                </motion.ul>
               </div>
             </div>
           </div>
@@ -114,7 +118,7 @@ const Headermain = () => {
             <a href={socialprofils.github}>Github</a>
               <a href={socialprofils.github}>Twitter</a>
             </div>
-            <p className="copyright m-0">copyright __ {logotext}</p>
+            <p className="copyright">copyright __ {logotext}</p>
           </div>
         </div>
       </header>

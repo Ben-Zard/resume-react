@@ -117,12 +117,14 @@
     visibility: hidden;
 }
  .menu__wrapper{
-    background-color: red;
+    background-color: $base-colorw;
+    z-index: 50;
  }
 .menu__opend {
     visibility: visible !important;
     
 }
+
 
 .main__menu_ul,
 .menu_right {
@@ -132,6 +134,7 @@
     transition-delay: 0s;
     visibility: hidden;
     z-index: 100;
+    transition: 1s ease ease-out ;
 }
 
 .menu_right {
@@ -184,11 +187,11 @@
 .the_menu {
     padding-top: 20vh;
     padding-bottom: 20vh;
-    padding-left: 0;
     li{
         text-decoration: none;
         list-style: none;
         padding: 25px; 
+        transition: .5s ease-out ;
     }
 }
 
@@ -197,8 +200,22 @@
         margin-left: 33.3333%;
     }
     .the_menu {
+        display: grid;
         padding-top: 10vh;
         padding-bottom: 10vh;
+        padding-left: 2rem;
+        justify-content: space-between;
+    }
+
+    .the_menu li {
+        // text-align: center;
+}
+}
+
+@media (min-width: 300px) {
+
+    .the_menu li {
+        text-align: center;
     }
 }
 
