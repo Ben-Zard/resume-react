@@ -5,8 +5,8 @@ import { EffectComposer, SSAO, Bloom } from "@react-three/postprocessing"
 export default function App() {
   return (
     <Canvas shadows gl={{ stencil: false, antialias: false }} camera={{ position: [0, 0, 20], fov: 50, near: 17, far: 40 }} className={"Three"}>
-      <fog attach="fog" args={["#f6f5f3", 25, 35]} />
-      <color attach="background" args={["#f9f8fd"]} />
+      <fog attach="fog" args={["#7dce94", 25, 35]} />
+      <color attach="background" args={["#f6f5f3"]} />
       <ambientLight intensity={1.5} />
       <directionalLight position={[-10, -10, -5]} intensity={0.5} />
       <directionalLight
@@ -27,7 +27,7 @@ export default function App() {
         </group>
       </Physics>
       <EffectComposer>
-        <SSAO radius={0.4} intensity={30} luminanceInfluence={0.2} color="#7dce94" />
+        <SSAO radius={0.4} intensity={30} luminanceInfluence={0.2} color="#f6f5f3" />
         <Bloom intensity={.05} kernelSize={3} luminanceThreshold={0.5} luminanceSmoothing={0.0} />
       </EffectComposer>
     </Canvas>
@@ -41,7 +41,7 @@ function InstancedSpheres({ count = 200 }) {
   return (
     <instancedMesh ref={ref} castShadow receiveShadow args={[null, null, count]}>
       <sphereBufferGeometry args={[1.2, 32, 32]} />
-      <meshLambertMaterial color="#3d3d3f" />
+      <meshLambertMaterial color="#cb9800" />
     </instancedMesh>
   )
 }
