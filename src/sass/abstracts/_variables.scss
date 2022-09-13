@@ -17,3 +17,12 @@ $textsb:"CustomFontSB";
 p{
     font-family: $textsb;
 }
+
+html{
+    background-color: $base-colorg;
+}
+
+.Three{
+
+    z-index: -1;
+}
