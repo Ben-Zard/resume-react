@@ -2,7 +2,7 @@ import React from 'react'
 import Three from '../components/Three';
 // import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata} from "../content_option";
+import { introdata} from "../config/content_option";
 import { Link } from "react-router-dom";
 function Hero() {
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { logotext, socialprofils } from "../content_option.js";
+import { logotext, socialprofils } from "../config/content_option.js";
 // import Themetoggle from "../components/themetoggle";
 import { motion } from "framer-motion";
 const Headermain = () => {
