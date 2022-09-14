@@ -7,7 +7,7 @@ function Home() {
     <div>
       <Headermain/>
       <Hero/>
-      <Cube/>
+      {/* <Cube/> */}
 </div>
   )
 }
