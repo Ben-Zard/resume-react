@@ -4,13 +4,13 @@ import Three from '../components/Three';
 import Typewriter from "typewriter-effect";
 import { introdata} from "../config/content_option";
 import { Link } from "react-router-dom";
+import AnimatedLetters from './AnimatedLetters';
 function Hero() {
 
   return (
 
    
    <div>
-        <div className = "sidesocials">dd</div>
     <div className = "gridEW">
     <div className = "innergrid">
         <div className="innerleft">
@@ -46,6 +46,7 @@ function Hero() {
                   </div>
                 </Link>
               </div>
+              <AnimatedLetters/>
               </div>
     </div>
         <div className ="three a">

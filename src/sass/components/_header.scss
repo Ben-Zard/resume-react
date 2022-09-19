@@ -35,6 +35,7 @@
     box-shadow: unset;
 }
 .copyright{
+    text-align: right;
     margin: 0;
 }
 .menu__button svg {
@@ -135,7 +136,7 @@
     transition-delay: 0s;
     visibility: hidden;
     z-index: 100;
-    transition: 1s ease ease-out ;
+    transition: .5s ease ease-out ;
 }
 
 .menu_right {
@@ -162,6 +163,7 @@
 }
 
 .bg__menu {
+
     position: absolute;
     left: 0px;
     top: 0px;
@@ -170,7 +172,7 @@
     background-color: var(--primary-color);
     will-change: transform;
     transform: translateX(-100%);
-    transition: .5s ease all;
+    transition: 1s ease all;
 }
 
 .menu__opend .bg__menu {
@@ -204,7 +206,7 @@
         display: grid;
         padding-top: 10vh;
         padding-bottom: 10vh;
-        padding-left: 2rem;
+        padding-left: 8rem;
         justify-content: space-between;
     }
 
@@ -248,11 +250,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
     width: 100%;
-    transition: 1s ease all ;
+    transition: .9s ease all;
+    transition-delay: 0.3s;
     padding: 2rem 3rem;
     .d {
 display: flex;
@@ -266,4 +269,36 @@ display: flex;
 .menu_footer a {
     color: var(--text-color-2);
     margin-right: 10px;
+}
+
+.spaceman{
+    position: absolute;
+    top: 10%;
+    right: 5%;
+  width:20vw;
+   z-index: 600;
+  animation: float 4s ease infinite;
+  background-color:var(--primary-color);
+    img{
+      width:100%;
+      height:auto;
+    }
+}
+
+.spaceman2{
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+  width:20vw;
+  z-index:-1;
+  animation: float 4s ease infinite;
+  background-color:var(--primary-color);
+  margin-right: 5rem;
+}
+
+
+@keyframes float{
+    0% {transform: translateY(-10px)  }       
+    50%{transform: translateY(15px) translateX(15px) }
+    100%{  transform: translateY(-10px)    }     
 }

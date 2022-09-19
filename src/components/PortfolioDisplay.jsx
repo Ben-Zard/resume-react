@@ -7,11 +7,10 @@ const PortfolioDisplay = () => {
 
   useEffect(() => {
     let element = ref.current;
-    let background = ref.current;
 
     const rotate = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`;
-      // background.style.transform = `translateX(${-window.pageYOffset}px)`;
+
     };
 
     window.addEventListener("scroll", rotate);
@@ -39,7 +38,6 @@ const PortfolioDisplay = () => {
       animate={{ opacity: 1, transition: { duration: 1 } }}
       exit={{ opacity: 0, transition: { duration: 0.5 } }}
     className = "portfolioDisplay">
-    {/* ref={ref}> */}
        <motion.ul ref={ref} variants={effects} initial="hidden" animate="show" className='card'>
               {Projects.map((d) => (
                 <PortfolioCard key={d.id} data={d} />

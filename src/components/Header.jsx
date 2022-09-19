@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { logotext, socialprofils } from "../config/content_option.js";
+import { logotext } from "../config/content_option.js";
+import astronaut from "./spaceman.png";
 // import Themetoggle from "../components/themetoggle";
 import { motion } from "framer-motion";
 const Headermain = () => {
@@ -52,7 +53,6 @@ const Headermain = () => {
             {logotext}
           </Link>
           <div className="flexinner">
-            {/* <Themetoggle /> */}
             <button className="menu__button  nav_ac" onClick={handleToggle}>
               {!isActive ? <VscClose /> : <VscGrabber />}
             </button>
@@ -61,6 +61,16 @@ const Headermain = () => {
 
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
           <div className="bg__menu">
+            <motion.div className="spaceman"
+            initial={{ right: '-20%', top: '150%' }}
+            animate={{
+              right: '5%',
+              top: '10%',
+              transition: { duration: 2, delay: 0.5 },
+            }}>
+              <img src={astronaut}  alt="spaceman" />
+          </motion.div>
+
             <div className="menu__wrapper">
               <div className="menu__container">
                 <motion.ul 
@@ -112,11 +122,6 @@ const Headermain = () => {
             </div>
           </div>
           <div className="menu_footer">
-            <div className="d">
-              <a href={socialprofils.facebook}>Facebook</a>
-            <a href={socialprofils.github}>Github</a>
-              <a href={socialprofils.github}>Twitter</a>
-            </div>
             <p className="copyright">copyright __ {logotext}</p>
           </div>
         </div>

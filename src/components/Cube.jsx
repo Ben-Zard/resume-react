@@ -3,7 +3,7 @@ import { FaReact,FaPython,FaSass,FaJsSquare,FaDatabase,FaGithub } from "react-ic
 
 function Cube() {
   return (
-    <><div className>
+    <>
         <div className="maincube">
           <div className="spinner">
 
@@ -27,7 +27,6 @@ function Cube() {
             </div>
           </div>
         </div>
-    </div>
     </>
   )
 }
