@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { Github } from "./Svg";
 
 const PortfolioCard = (props) => {
   const item = {
@@ -23,7 +24,7 @@ const PortfolioCard = (props) => {
           Visit
         </Link>
         <NavLink to={{ pathname: `${github}` }} target="_blank"className='git'>
-          <div width={30} height={30}className='github' />
+          <Github width={30} height={30} className='github'/>
         </NavLink>
       </footer>
     </motion.li>
