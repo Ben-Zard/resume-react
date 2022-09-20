@@ -1,12 +1,14 @@
 import React from 'react'
-import Particles from 'react-particles'
 import Cube from '../components/Cube'
-import ParticlesComponent from '../components/Particles'
-
+import Abouttext from "../components/Abouttext"
+import SocialIcons from '../components/Socials'
+import Headermain from '../components/Header'
 function About() {
   return (
     <>
-    <div><Cube/></div>
+  <Headermain/>
+    <Abouttext/>
+    <SocialIcons/>
     </>
     )
 }

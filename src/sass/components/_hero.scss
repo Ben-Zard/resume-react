@@ -47,13 +47,16 @@ background-color: $base-colorg;
   }
 
 .innerleft{
-background-color:$base-colorw;
 height: 100%;
+background: transparent;
 display: grid;
 align-content: center;
 justify-content: space-between;
 align-items: baseline;
 justify-content: stretch;
+font-size: calc(0.6rem + 1vw);
+backdrop-filter: blur(4px);
+ 
 .intro{
   width: 100%;
   flex-direction: column;
