@@ -12,7 +12,7 @@
   }
 
   .gridEW{
-    margin-top: 2rem;
+    margin-top: .2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -23,7 +23,7 @@
     
     .a{
         grid-area: 1 / 2 / 5 / 4; 
-        height: 90vh;
+        height: 100vh;
     }
 
     .innergrid{
@@ -36,13 +36,20 @@
       .gridEW {
         display: flex;
         flex-wrap: wrap;
-        
+      .logo-container {
+        right: -20px;
+display: block;
+      }
+
         .innerleft{
 background-color: $base-colorg;
         }
         canvas{
           width: 100%!important;
         }
+      }
+      .buttonflex{
+        margin-top: 0!important;
       }
   }
 
@@ -79,16 +86,59 @@ backdrop-filter: blur(4px);
 .buttonflex{
  display: flex;
  justify-content: space-around;
- flex-wrap: wrap;
- margin: 2rem;
+ align-items: center;
+//  flex-wrap: wrap;
+ margin: 1rem;
+ margin-left: 8rem;
  .acbtn{
-  background-color: $base-colorlg;
-
+  //background-color: $base-colorlg;
+ border-radius: 4px;
+ padding: .2rem;
   margin: .2rem;
   text-decoration: none;
-
  }
+
+a {
+  transform: translate(-50%, -50%);
+
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #262626;
+  color: #FFF;
+  text-align: center;
+  transition: 0.5;
+  overflow: hidden;
 }
+
+a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  /*    background: #F00;*/
+  z-index: -1;
+  transition: 1s;
+  border-style: solid;
+  border-color: #F00;
+  border-width: 80px 100px;
+  transform: rotate(360deg);
+  transform-origin: top left
+}
+
+a:hover:before {
+  border-color: #00F;
+  transform: rotate(40deg)
+}
+
+a:hover {
+  color: #ff0;
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
+ }
+
 
 .sidesocials{
 float: left;

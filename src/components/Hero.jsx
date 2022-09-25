@@ -41,7 +41,7 @@ function Hero() {
                 </Link>
 
                 <Link to="/contact"className="acbtn">
-                  <div className="acbtn">
+                  <div className="acbtn ">
                     Contact Me
                   </div>
                 </Link>
@@ -54,7 +54,7 @@ function Hero() {
     </div>
 </div>
 </div>
-
+    
   )
 }
 
